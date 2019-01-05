@@ -1,3 +1,4 @@
 *.sw[poe]
 *.so
 libcounter.h
+main
