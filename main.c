@@ -7,6 +7,7 @@ void onCount(int n) {
 }
 
 int main(void) {
+    printf("Running from C..\n");
     int rc = Count(3, onCount);
     printf("Done!\n");
     return rc;

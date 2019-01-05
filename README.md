@@ -68,20 +68,20 @@ func count(n int, goCb countCb) int {
 
 func main() {}
 ```
-## How to run
-### Build
-```
-make
-```
-
-or
-
-```
+## How to Build
+First build a shared library from Go code.
+```sh
 go build -v -buildmode=c-shared -o libcounter.so *.go
+```
+
+Then build a C executable using the library.
+```sh
 gcc -o main main.c libcounter.so
 ```
 
-### Run
+> Makefile is provided. For a quick build, type `make`.
+
+To run:
 ```
 $ ./main
 Count: 1
@@ -89,6 +89,14 @@ Count: 2
 Count: 3
 Done!
 ```
+
+Also try:
+```
+$ go run counter.go
+```
+It demonstrate that by putting C-typed (binding) code as a separate file
+(seen as counter_api.go), the rest of `pure` Go code become testable and
+runnable within Go land.
 
 ## Comments / Tips
 * No blank-line between C-code comment lines and `import "C"`

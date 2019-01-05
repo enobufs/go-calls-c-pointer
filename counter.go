@@ -1,7 +1,7 @@
 package main
 
 // typedef void (*count_cb)(int);
-// extern void bridge(int sum, count_cb cb) {
+// extern void makeCallback(int sum, count_cb cb) {
 //     cb(sum);
 // }
 import "C"
@@ -38,4 +38,5 @@ func main() {
 	count(3, func(n int) {
 		fmt.Printf("count %d\n", n)
 	})
+	fmt.Println("done!")
 }
