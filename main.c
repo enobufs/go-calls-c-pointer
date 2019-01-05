@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 
-void callback_for_count(int n) {
+void onCount(int n) {
     printf("Count: %d\n", n);
 }
 
 int main(void) {
-    int rc = Count(3, callback_for_count);
+    int rc = Count(3, onCount);
     printf("Done!\n");
     return rc;
 }

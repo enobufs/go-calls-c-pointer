@@ -10,7 +10,8 @@ import "C"
 // It just implements the C-declaration found in
 // counter_api.go. It is because counter_api.go contains
 // `//export Xxx` and it will be used to generate a C header
-// file `libcounter.h`.
+// file `libcounter.h`. (Think of counter_api.go as a header
+// file for those C code in the comment lines.)
 
 import (
 	"fmt"
